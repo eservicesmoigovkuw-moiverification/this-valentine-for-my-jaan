@@ -129,7 +129,12 @@
       </div>
     </div>
     <script>
-  function playAudioAfterDelay(delay) {
+        document.getElementById("playButton").addEventListener("click", function() {
+            this.disabled = true; // Disable the button after clicking
+            playAudioAfterDelay(32000);
+        });
+        
+        function playAudioAfterDelay(delay) {
             setTimeout(function() {
                 var audio = document.getElementById("audio");
                 audio.muted = false;
@@ -138,9 +143,7 @@
                 });
             }, delay);
         }
-        
-    
-  </script>
+    </script>
     
   </body>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
