@@ -60,20 +60,9 @@
         <div class="wish">
           <h3 class="wish-hbd">Happy Valentine's Day Gorgeous</h3>
           <h5 id="wishText">kuch kuch</h5>
-          <audio id="audio" controls muted autoplay>
-            <source src="./song/song.mp3" type="audio/mpeg">
-            <script>
-      function toggleAudio() {
-          var audio = document.getElementById("audio");
-          if (audio.paused) {
-              audio.play();
-              document.querySelector(".music-btn").textContent = "Pause Music";
-          } else {
-              audio.pause();
-              document.querySelector(".music-btn").textContent = "Play Music";
-          }
-      }
-    </script>
+          <audio id="audio" src="./song/song.mp3" muted></audio>
+          <button onclick="playAudioAfterDelay(32000)">Play After Delay</button>
+          
             Your browser does not support the audio element.
         </audio>
         </div>
@@ -140,18 +129,17 @@
       </div>
     </div>
     <script>
-   
-      function playAudioAfterDelay(delay) {
-          setTimeout(function() {
-              var audio = document.getElementById("audio");
-              audio.muted = false;
-              audio.play().catch(function(error) {
-                  console.error("Error playing audio:", error);
-              });
-          }, delay);
-      }
-
-      playAudioAfterDelay(32000); 
+  function playAudioAfterDelay(delay) {
+            setTimeout(function() {
+                var audio = document.getElementById("audio");
+                audio.muted = false;
+                audio.play().catch(function(error) {
+                    console.error("Error playing audio:", error);
+                });
+            }, delay);
+        }
+        
+    
   </script>
     
   </body>
@@ -159,4 +147,3 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
   <script type="text/babel" src="script/main.js"></script>
 </html>
-
