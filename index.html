@@ -13,7 +13,7 @@
 
     <style>
       #audio {
-          display: FLEX;
+          display: block;
       }
 
    
@@ -34,7 +34,7 @@
       <div class="one">
         <h1 class="one">
           Hey
-          <span id="name">xyz</span>
+          <span id="name">swastika</span>
         </h1>
         <p class="two" id="greetingText">I really like your name btw!</p>
       </div>
@@ -58,7 +58,7 @@
         <p class="idea-4">Because,</p>
         <p class="idea-5" id="specialText">
           You are Special
-          <span>:)</span>
+          <span>🙂</span>
         </p>
         <p class="idea-6">
           <span>S</span>
@@ -68,12 +68,11 @@
       <div class="six">
         <img src="img/vector.jpg" alt="" class = "girl-dp" id="imagePath" />
         <div class="wish">
-          <h3 class="wish-hbd">Happy Valentine's Day Gorgeous</h3>
+          <h3 class="wish-hbd">Happy Valentine's Day  Gorgeous</h3>
           <h5 id="wishText">kuch kuch</h5>
           <audio id="audio" src="./song/song.mp3" muted></audio>
-          <button onclick="playAudioAfterDelay(1000)">Play After Delay</button>
-          
-            Your browser does not support the audio element.
+          <button onclick="playAudioAfterDelay(1000)">click for music </button>
+    
         </audio>
         </div>
       </div>
@@ -139,11 +138,7 @@
       </div>
     </div>
     <script>
-        document.getElementById("playButton").addEventListener("click", function() {
-            this.disabled = true; // Disable the button after clicking
-            playAudioAfterDelay(1000);
-        });
-        
+       
         function playAudioAfterDelay(delay) {
             setTimeout(function() {
                 var audio = document.getElementById("audio");
